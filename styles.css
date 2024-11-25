@@ -1,0 +1,663 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(15, 10, 15);
+    color: white;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+}
+.starting_site{
+    /* height: 50vh; */
+    height: 50%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border:3px solid blue;
+    border-radius: 10px;
+    margin: auto;
+    position: absolute;
+}
+
+.starting_site .modes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5vh;
+}
+
+.starting_site .buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    /* margin-top: 20px; */
+}
+
+.starting_site .buttons button{
+    height: 30px;
+    width: 100px;
+}
+
+.starting_site .buttons button:hover{
+    border: 3px solid blue;
+    border-radius: 5px;
+    transition: 0.1s;
+}
+
+/* Classic gane */
+
+.classic_game_site{
+    visibility: hidden;
+    /* visibility: visible; */
+    /* height: 50vh; */
+    height: 50%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border:3px solid blue;
+    border-radius: 10px;
+    margin: auto;
+    position: absolute;
+}
+
+.classic_game_site h2{
+    font-size: 30px;
+    padding: 10px;
+}
+
+.classic_game_site p{
+    font-size: 20px;
+    padding: 10px;
+}
+
+.classic_game_site #guess_input{
+    width: 30%;
+    margin: 20px;
+    height: 25px;
+    font-size: 16px;
+}
+
+.classic_game_site #guess_button
+{
+    height: 30px;
+    width: 100px;
+    font-size: 16px;
+    margin: 15px;
+}
+.classic_game_site #guess_button:hover{
+    border: 3px solid blue;
+    border-radius: 5px;
+    transition: 0.1s;
+}
+
+.classic_game_site #result_message{
+    font-size: 20px;
+    margin: 10px 0 0 0;
+    height: 20px;
+}
+
+/*custom game*/
+
+.custom_game_site{
+    visibility: hidden;
+    /* visibility: visible; */
+    /* height: 50vh; */
+    height: 50%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border:3px solid blue;
+    border-radius: 10px;
+    margin: auto;
+    position: absolute;
+}
+
+.custom_game_site h2{
+    font-size: 30px;
+    padding: 10px;
+    position: absolute;
+    top: 50px;
+}
+
+.custom_game_site #hearts-part{
+    width: 100%;
+    display: flex;
+    margin: 10px;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    visibility: hidden;
+    position: absolute;
+    top: 130px;
+}
+
+.custom_game_site #hearts-part label{
+    font-size: 20px;
+}
+
+.custom_game_site #hearts-part input[type="number"]{
+    width: 30%;
+    margin: 5px;
+    height: 25px;
+    font-size: 16px;
+}
+
+.custom_game_site #hearts-part input[type="button"]{
+    height: 30px;
+    width: 100px;
+    font-size: 16px;
+    margin: 15px;
+}
+
+.custom_game_site #game-part{
+    width: 100%;
+    display: flex;
+    margin: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    position: absolute;
+    top: 130px;
+}
+
+.custom_game_site #game-part p{
+    font-size: 20px;
+    padding: 10px;
+}
+
+.custom_game_site #game-part input[type="number"]{
+    width: 30%;
+    margin: 5px;
+    height: 25px;
+    font-size: 16px;
+}
+
+.custom_game_site #game-part input[type="button"]{
+    height: 30px;
+    width: 100px;
+    font-size: 16px;
+    margin: 15px;
+}
+
+.custom_game_site #game-part input[type="button"]:disabled, .classic_game_site #guess_button:disabled{
+    border-radius: 5px;
+    transition: 0.1s;
+    background-color: rgb(163, 163, 163); 
+}
+.custom_game_site #game-part input[type="button"]:disabled:hover , .classic_game_site #guess_button:disabled:hover{
+    cursor: not-allowed;
+    border: 3px solid blue;
+}
+
+@media (max-width:800px) and (min-width:500px){
+        
+    .starting_site{
+        width: 60%;
+    }
+    
+    /* Classic gane */
+    
+    .classic_game_site{
+        width: 60%;
+    }
+
+    .classic_game_site p{
+        font-size: 18px;
+        padding: 10px;
+    }
+    
+    .classic_game_site #guess_input{
+        width: 50%;
+    }
+    
+    /*custom game*/
+    
+    .custom_game_site{
+        width: 60%;
+    }
+
+    .custom_game_site #game-part p{
+        font-size: 18px;
+        padding: 10px;
+    }
+    
+    .custom_game_site #hearts-part input[type="number"]{
+        width: 50%;
+    }
+    
+    .custom_game_site #game-part input[type="number"]{
+        width: 50%;
+    }
+
+}
+
+@media (max-width:500px) and (min-width:450px){
+    .starting_site{
+        width: 60%;
+    }
+    .classic_game_site{
+        width: 60%;
+    }
+
+    .classic_game_site p{
+        font-size: 18px;
+        padding: 10px;
+    }
+    
+    .classic_game_site #guess_input{
+        width: 50%;
+    }
+    
+    /*custom game*/
+    
+    .custom_game_site{
+        width: 60%;
+    }
+
+    .custom_game_site #game-part p{
+        font-size: 18px;
+        padding: 10px;
+    }
+    
+    .custom_game_site #hearts-part input[type="number"]{
+        width: 50%;
+    }
+    
+    .custom_game_site #game-part input[type="number"]{
+        width: 50%;
+    }
+}
+
+@media (max-width:450px) and (min-width:350px){
+    .starting_site{
+        width: 80%;
+    }
+    .classic_game_site{
+        width: 80%;
+    }
+
+    .classic_game_site p{
+        font-size: 18px;
+        padding: 10px;
+    }
+    
+    .classic_game_site #guess_input{
+        width: 50%;
+    }
+    
+    /*custom game*/
+    
+    .custom_game_site{
+        width: 80%;
+    }
+
+    .custom_game_site #game-part p{
+        font-size: 18px;
+        padding: 10px;
+    }
+    
+    .custom_game_site #hearts-part input[type="number"]{
+        width: 50%;
+    }
+    
+    .custom_game_site #game-part input[type="number"]{
+        width: 50%;
+    }
+}
+
+@media (max-width:350px) and (min-width:270px){
+    .starting_site{
+        width: 90%;
+    }
+    .classic_game_site{
+        width: 90%;
+    }
+
+    .classic_game_site p{
+        font-size: 18px;
+        padding: 10px;
+    }
+    
+    .classic_game_site #guess_input{
+        width: 50%;
+    }
+    
+    /*custom game*/
+    
+    .custom_game_site{
+        width: 90%;
+    }
+
+    .custom_game_site #game-part p{
+        font-size: 18px;
+        padding: 10px;
+    }
+    
+    .custom_game_site #hearts-part input[type="number"]{
+        width: 50%;
+    }
+    
+    .custom_game_site #game-part input[type="number"]{
+        width: 50%;
+    }
+}
+
+@media (max-width:270px) and (min-width:250px){
+    .starting_site{
+        width: 90%;
+    }
+
+    .starting_site .buttons{
+        gap: 25px;
+    }
+    .classic_game_site{
+        width: 90%;
+    }
+
+    .classic_game_site p{
+        font-size: 18px;
+        padding: 10px;
+    }
+    
+    .classic_game_site #guess_input{
+        width: 50%;
+    }
+    
+    /*custom game*/
+    
+    .custom_game_site{
+        width: 90%;
+    }
+
+    .custom_game_site #game-part p{
+        font-size: 18px;
+        padding: 10px;
+    }
+    
+    .custom_game_site #hearts-part input[type="number"]{
+        width: 50%;
+    }
+    
+    .custom_game_site #game-part input[type="number"]{
+        width: 50%;
+    }
+}
+
+
+
+
+
+@media (max-height:600px) and (min-height:560px){
+    
+    /* Classic gane */
+    
+    .classic_game_site{
+        height: 50%;
+    }
+    
+    .classic_game_site #guess_input{
+        height: 25px;
+    }
+    
+    .classic_game_site #guess_button
+    {
+        height: 30px;
+    }
+    
+    /*custom game*/
+    
+    .custom_game_site{
+        height: 50%;
+    }
+    
+    .custom_game_site #hearts-part{
+        top: 110px;
+    }
+    
+    .custom_game_site #game-part{
+       top: 110px;
+    }
+    
+}
+
+@media (max-height:560px) and (min-height:530px){
+    /* Classic gane */
+    
+    .classic_game_site{
+        height: 50%;
+    }
+    
+    .classic_game_site #guess_input{
+        height: 25px;
+    }
+    
+    .classic_game_site #guess_button
+    {
+        height: 30px;
+    }
+    
+    /*custom game*/
+    
+    .custom_game_site{
+        height: 50%;
+    }
+    
+    .custom_game_site #hearts-part{
+        top: 90px;
+    }
+    
+    .custom_game_site #game-part{
+       top: 90px;
+    }
+}
+
+@media (max-height:530px) and (min-height:500px){
+    /* Classic gane */
+    
+    .classic_game_site{
+        height: 50%;
+    }
+    
+    .classic_game_site #guess_input{
+        height: 25px;
+    }
+    
+    .classic_game_site #guess_button
+    {
+        height: 30px;
+    }
+    
+    /*custom game*/
+    
+    .custom_game_site{
+        height: 50%;
+    }
+
+    .custom_game_site h2{
+        font-size: 30px;
+        padding: 10px;
+        position: absolute;
+        top: 30px;
+    }
+    
+    .custom_game_site #hearts-part{
+        top: 70px;
+    }
+    
+    .custom_game_site #game-part{
+       top: 70px;
+    }
+}
+
+@media (max-height: 500px) and (min-width: 450px){
+    /* Classic gane */
+    
+    .classic_game_site{
+        height: 50%;
+    }
+    
+    .classic_game_site h2{
+        padding: 5px;
+    }
+    
+    .classic_game_site p{
+        font-size: 20px;
+        padding: 5px;
+    }
+
+    .classic_game_site #guess_input{
+        height: 25px;
+        margin: 15px;
+    }
+    
+    .classic_game_site #guess_button
+    {
+        height: 30px;
+        margin: 10px;
+    }
+    
+    /*custom game*/
+    
+    .custom_game_site{
+        height: 50%;
+    }
+
+    .custom_game_site h2{
+        font-size: 30px;
+        padding: 1px;
+        top: 20px;
+    }
+    
+    .custom_game_site #hearts-part{
+        top: 50px;
+    }
+    
+    .custom_game_site #game-part{
+       top: 50px;
+    }
+}
+
+@media (max-height:450px) and (min-height:400px){
+    /* Classic gane */
+    
+    .classic_game_site{
+        height: 60%;
+    }
+    
+    .classic_game_site h2{
+        padding: 5px;
+        font-size: 30px;
+    }
+    
+    .classic_game_site p{
+        font-size: 15px;
+        padding: 5px;
+    }
+
+    .classic_game_site #guess_input{
+        height: 25px;
+        margin: 15px;
+    }
+    
+    .classic_game_site #guess_button{
+        height: 30px;
+        margin: 10px;
+    }
+    
+    /*custom game*/
+    
+    .custom_game_site{
+        height: 60%;
+    }
+
+    .custom_game_site h2{
+        font-size: 30px;
+        padding: 1px;
+        top: 20px;
+    }
+    
+    .custom_game_site p{
+        font-size: 15px;
+    }
+
+    .custom_game_site #hearts-part{
+        top: 50px;
+    }
+    
+    .custom_game_site #game-part{
+       top: 50px;
+    }
+
+    h3{
+        font-size:20px;
+    }
+}
+
+@media (max-height:400px) and (min-height:320px){
+    .classic_game_site{
+        height: 70%;
+    }
+    
+    .classic_game_site h2{
+        padding: 5px;
+        font-size: 30px;
+    }
+    
+    .classic_game_site p{
+        font-size: 15px;
+        padding: 5px;
+    }
+
+    .classic_game_site #guess_input{
+        height: 25px;
+        margin: 15px;
+    }
+    
+    .classic_game_site #guess_button{
+        height: 30px;
+        margin: 10px;
+    }
+    
+    /*custom game*/
+    
+    .custom_game_site{
+        height: 70%;
+    }
+
+    .custom_game_site h2{
+        font-size: 30px;
+        padding: 1px;
+        top: 20px;
+    }
+    
+    .custom_game_site p{
+        font-size: 15px;
+    }
+
+    .custom_game_site #hearts-part{
+        top: 50px;
+    }
+    
+    .custom_game_site #game-part{
+       top: 50px;
+    }
+
+    h3{
+        font-size:20px;
+    }
+}
+

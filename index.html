@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the number</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <div id="starting_site" class="starting_site">
+            <div class="modes">
+                <h1>Guess the number game</h1>
+                <h3>Choose a game mode:</h3>
+            </div>
+            <div id="buttons" class="buttons">
+                <button id="start_classic" onclick="guess_classic()">Classic game</button>
+                <button id="start_custom" onclick="guess_custom()">Custom game</button>
+            </div>
+        </div>
+        <div id="classic_game_site" class="classic_game_site">
+            <h2>Classic Game</h2>
+            <p>Guess a number between 1 and 100</p>
+            <input type="number" id="guess_input" min="0" max="100">
+            <input type="button" id="guess_button" onclick="guess_c()" value="Guess">
+            <h3 id="result_message"></h3>
+        </div>
+        <div id="custom_game_site" class="custom_game_site">
+            <h2>Custom Game</h2>
+            <div id="hearts-part">
+                <label for="hearts" class="hearts">Hearts:</label>
+                <input type="number" name="heart_inp" id="heart_inp" min="0">
+                <input type="button" id="heart_button" value="Set" onclick="set_heart()">
+            </div>
+            <div id="game-part">
+                <p>Guess a number between 1 and 100</p>
+                <input type="number" id="guess_custom_input" min="0" max="100">
+                <input type="button" id="guess_custom_button" onclick="guess_cus()" value="Guess">
+                <h3 id="result_custom_message"></h3>
+            </div>
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
