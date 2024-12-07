@@ -1,5 +1,4 @@
 let random = Math.floor(Math.random() * 101);
-console.log("liczba to: " + random);
 let button_custom = document.getElementById("guess_custom_button")
 let button_classic = document.getElementById("guess_button")
 let message = document.getElementById('result_message')
