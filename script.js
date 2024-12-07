@@ -87,13 +87,13 @@ function guess_custom(){
                 }
                 else if(num === random){
                     messages.innerHTML = 'Congratulations! You guessed the number'
-                    button_custom.disabled = true;
+                    button_custom.disabled = true
                     return
                 }
             }
             else{
                 messages.innerHTML = 'Sorry, you lost. The correct number was '+ random
-                button_custom.disabled = true;
+                button_custom.disabled = true
             }
             document.getElementById('guess_custom_input').value = ""
     }
