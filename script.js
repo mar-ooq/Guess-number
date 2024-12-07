@@ -13,8 +13,8 @@ document.getElementById('guess_input').value = ""
 document.getElementById('guess_custom_input').value = ""
 function guess_classic(){
     starting_site.style.visibility = 'hidden';
-    classic_game_site.style.visibility = 'visible';
-    custom_game_site.style.visibility = 'hidden';
+    classic_game_site.style.visibility = 'visible'
+    custom_game_site.style.visibility = 'hidden'
     hearts = 3
     guess_c = function(){
         let num = document.getElementById('guess_input').value
@@ -36,7 +36,7 @@ function guess_classic(){
             }
             else if(num === random){
                 message.innerHTML = 'Congratulations! You guessed the number'
-                button_classic.disabled = true;
+                button_classic.disabled = true
                 return
             }
         }
@@ -48,9 +48,9 @@ function guess_classic(){
     }
 }
 function guess_custom(){
-    starting_site.style.visibility = 'hidden';
-    classic_game_site.style.visibility = 'hidden';
-    custom_game_site.style.visibility = 'visible';
+    starting_site.style.visibility = 'hidden'
+    classic_game_site.style.visibility = 'hidden'
+    custom_game_site.style.visibility = 'visible'
     h_p.style.visibility = 'visible'
     g_p.style.visibility = 'hidden'
     set_heart = function(){
