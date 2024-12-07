@@ -1,4 +1,4 @@
-let random = Math.floor(Math.random() * 101);
+let random = Math.floor(Math.random() * 101)
 let button_custom = document.getElementById("guess_custom_button")
 let button_classic = document.getElementById("guess_button")
 let message = document.getElementById('result_message')
@@ -12,7 +12,7 @@ document.getElementById('heart_inp').value = ""
 document.getElementById('guess_input').value = ""
 document.getElementById('guess_custom_input').value = ""
 function guess_classic(){
-    starting_site.style.visibility = 'hidden';
+    starting_site.style.visibility = 'hidden'
     classic_game_site.style.visibility = 'visible'
     custom_game_site.style.visibility = 'hidden'
     hearts = 3
@@ -42,7 +42,7 @@ function guess_classic(){
         }
         else{
             message.innerHTML = 'Sorry, you lost. The correct number was '+ random
-            button_classic.disabled = true;
+            button_classic.disabled = true
         }
         document.getElementById('guess_input').value = ''
     }
